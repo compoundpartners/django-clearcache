@@ -9,3 +9,10 @@ def get_cache_choices():
 
 class ClearCacheForm(forms.Form):
     cache_name = forms.ChoiceField(choices=get_cache_choices)
+
+
+class PurgeCFCacheForm(forms.Form):
+    urls = forms.CharField(widget=forms.Textarea, required=False)
+    purge_everything = forms.BooleanField(required=False)
+
+

@@ -2,7 +2,6 @@
 
 {% block content %}
   <div id="content-main">
-    <h2>Clear cache</h2>
     <form method="post" action=".">
       {% csrf_token %}
       {{ form.as_p }}
